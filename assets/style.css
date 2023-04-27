@@ -1,0 +1,217 @@
+:root {  
+  --purple: rgb(224, 100, 255);
+  --pink: rgb(255, 94, 247);
+  --dark-purple: rgb(72, 0, 87);
+  --green : rgb(71, 255, 71);
+  --dark-green : rgb(1, 173, 1);
+  --blurple : rgb(114, 137, 218);
+  --dark-blurple : rgb(58, 65, 150);
+}
+
+@keyframes float {
+  from, to {
+    transform: translateY(-0%);
+  }
+  
+  50% {    
+    transform: translateY(-3%);
+  }
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 1000% center;
+  }
+  
+  to {
+    background-position: 0% center;
+  }
+}
+
+body {
+  zoom: 0.7;
+  background-color: black;
+  margin: 0rem;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  cursor: cell
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.word {
+  color: white;
+  font-size: clamp(2rem, 8vw, 10rem);
+  font-family: "Rubik", sans-serif;
+  margin: 0rem;
+  text-transform: uppercase;
+  transition: opacity 250ms ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Title */
+
+#title:hover {
+  background: linear-gradient(
+    to right,
+    var(--purple),
+    var(--pink),
+    var(--dark-purple)
+  );
+  background-size: 1000%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: background-pan 55s linear infinite;
+}
+
+
+
+/* Github Link */
+
+.github {
+  cursor: cell;
+}
+
+#text:has(.github:hover) .word:not(.github:hover) {
+  opacity: 0.2;
+}
+
+.github span {
+  display: inline-block;
+}
+
+.github > .letter {
+  transition: transform 350ms ease;
+}
+
+.github:hover > .letter {
+  transition-duration: 800ms;
+}
+
+.github:hover > .letter {
+  animation: float 5s ease infinite;
+}
+
+.github:hover > .letter {
+  background: linear-gradient(
+    to right,
+    var(--green),
+    var(--dark-green),
+    var(--green)
+  );
+  background-size: 1000%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: background-pan 35s linear infinite;
+}
+
+.github:hover > .letter:nth-child(1) {
+  transform: translate(-20%, 30%) rotate(8deg);
+}
+
+.github:hover > .letter:nth-child(2) {
+  transform: translate(15%, -215) rotate(4deg);
+}
+
+.github:hover > .letter:nth-child(3) {
+  transform: translate(-10%, 30%) rotate(-6deg);
+}
+
+.github:hover > .letter:nth-child(4) {
+  transform: translate(0%, 8%) rotate(-8deg);
+}
+
+.github:hover > .letter:nth-child(5) {
+  transform: translate(0%, -20%) rotate(5deg);
+}
+
+.github:hover > .letter:nth-child(6) {
+  transform: translate(10%, 25%) rotate(5deg);
+}
+
+/* Discord Link */
+
+.discord {
+  cursor: cell;
+}
+
+#text:has(.discord:hover) .word:not(.discord:hover) {
+  opacity: 0.2;
+}
+
+.discord span {
+  display: inline-block;
+}
+
+.discord > .letter {
+  transition: transform 350ms ease;
+}
+
+.discord:hover > .letter {
+  transition-duration: 800ms;
+}
+
+.discord:hover > .letter {
+  animation: float 5s ease infinite;
+}
+
+.discord:hover > .letter {
+  background: linear-gradient(
+    to right,
+    var(--blurple),
+    var(--dark-blurple),
+    var(--blurple)
+  );
+  background-size: 1000%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: background-pan 35s linear infinite;
+}
+
+.discord:hover > .letter:nth-child(1) {
+  transform: translate(20%, -15%) rotate(8deg);
+}
+
+.discord:hover > .letter:nth-child(2) {
+  transform: translate(15%, -25%) rotate(4deg);
+}
+
+.discord:hover > .letter:nth-child(3) {
+  transform: translate(-7%, 20%) rotate(-6deg);
+}
+
+.discord:hover > .letter:nth-child(4) {
+  transform: translate(0%, 8%) rotate(-8deg);
+}
+
+.discord:hover > .letter:nth-child(5) {
+  transform: translate(25%, -30%) rotate(5deg);
+}
+
+.discord:hover > .letter:nth-child(6) {
+  transform: translate(10%, 25%) rotate(5deg);
+}
+
+.discord:hover > .letter:nth-child(7) {
+  transform: translate(10%, -25%) rotate(5deg);
+}
+
+/* Email */
+
+.contact {
+  cursor: cell;
+}
+
+#text:has(.contact:hover) .word:not(.contact:hover) {
+  opacity: 0.2;
+}
