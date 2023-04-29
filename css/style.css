@@ -1,0 +1,170 @@
+:root {
+  --purple: rgb(224, 100, 255);
+  --pink: rgb(255, 94, 247);
+  --dark-purple: rgb(72, 0, 87);
+  --green: rgb(71, 255, 71);
+  --dark-green: rgb(1, 173, 1);
+  --blurple: rgb(114, 137, 218);
+  --dark-blurple: rgb(58, 65, 150);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  transition: all 0.25s ease;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #080807;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Satoshi", sans-serif;
+  cursor: cell;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  cursor: cell;
+}
+
+main {
+  padding: 2rem;
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.line .amp:hover {
+  -webkit-text-stroke: 0.15rem #fff;
+  -webkit-text-fill-color: transparent;
+}
+
+.title:hover {
+  background: linear-gradient(
+    to right,
+    var(--purple),
+    var(--pink),
+    var(--dark-purple)
+  );
+  background-size: 1000%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: background-pan 55s linear infinite;
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 1000% center;
+  }
+
+  to {
+    background-position: 0% center;
+  }
+}
+
+main:has(a:hover) p:not(:has(a:hover)) {
+  opacity: 0.2;
+}
+
+main a > span {
+  display: inline-block;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+main .github:hover > span {
+  background: linear-gradient(
+    to right,
+    var(--green),
+    var(--dark-green),
+    var(--green)
+  );
+  background-size: 1000%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: background-pan 35s linear infinite;
+}
+
+main .github:hover > span:nth-child(1) {
+  transform: translate(-20%, 30%) rotate(8deg);
+}
+
+main .github:hover > span:nth-child(2) {
+  transform: translate(15%, -215) rotate(4deg);
+}
+
+main .github:hover > span:nth-child(3) {
+  transform: translate(-10%, 30%) rotate(-6deg);
+}
+
+main .github:hover > span:nth-child(4) {
+  transform: translate(0%, 8%) rotate(-8deg);
+}
+
+main .github:hover > span:nth-child(5) {
+  transform: translate(0%, -20%) rotate(5deg);
+}
+
+main .github:hover > span:nth-child(6) {
+  transform: translate(10%, 25%) rotate(5deg);
+}
+
+main .discord:hover > span {
+  background: linear-gradient(
+    to right,
+    var(--blurple),
+    var(--dark-blurple),
+    var(--blurple)
+  );
+  background-size: 1000%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: background-pan 35s linear infinite;
+}
+
+main .discord:hover > span:nth-child(1) {
+  transform: translate(20%, -15%) rotate(8deg);
+}
+
+main .discord:hover > span:nth-child(2) {
+  transform: translate(15%, -25%) rotate(4deg);
+}
+
+main .discord:hover > span:nth-child(3) {
+  transform: translate(-7%, 20%) rotate(-6deg);
+}
+
+main .discord:hover > span:nth-child(4) {
+  transform: translate(0%, 8%) rotate(-8deg);
+}
+
+main .discord:hover > span:nth-child(5) {
+  transform: translate(25%, -30%) rotate(5deg);
+}
+
+main .discord:hover > span:nth-child(6) {
+  transform: translate(10%, 25%) rotate(5deg);
+}
+
+main .discord:hover > span:nth-child(7) {
+  transform: translate(10%, -25) rotate(5deg);
+}
+
+main .contact:hover > span {
+  transform: translate(40%, -5%) rotate(15deg);
+}
